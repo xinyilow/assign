@@ -1,0 +1,19 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "devDependencies": {
+    "chunk": "^0.0.2",
+    "electron": "^1.7.9",
+    "jquery": "^3.2.1",
+    "jquery-pagination": "^1.1.0",
+    "jsonfile": "^4.0.0",
+    "semantic-ui": "^2.2.13"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}
