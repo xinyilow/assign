@@ -9,8 +9,8 @@
 	<div class="ui hidden divider"></div>
 	<div class="ui hidden divider"></div>
 	<div style="font-weight: bold;">
-		<div class="ui hidden divider"></div>
-		<div class="ui form attached segment" style="width: 860px; margin: auto;">
+	<div class="ui hidden divider"></div>
+	<div class="ui form attached segment" style="width: 860px; margin: auto;">
 		<u>F</u>ile
 		<u>R</u>ecords
 		<u>E</u>nd
@@ -25,20 +25,24 @@
 			<div class="two fields">
 				<div class="field">
 					<label>Membership Number</label>
+					<!--THIS IS FOR TO LET MEMBERSHIP NUMBER IS NUMERIC-->
 					<input id="input_membership" class="input" type="number">
 					<div class="ui pointing basic red label error-message" id="error03">
-						<label>Membership Number is not 6 digit</label>
+						<label>Membership Number was not 6 digit</label>
 					</div>
 					<div class="ui pointing basic red label error-message" id="error02">
-						<label>Membership Number is no valid modules 11 number</label>						
+						<label>Membership Number was no valid modules 11 number</label>						
 					</div>
-				</div>
+					<div class="ui pointing basic red label error-message" id="error15">
+						<label>Membership Number was not input</label>						
+					</div>
+			</div>
 				<div class="field">
 					<label>Number Of Guest</label>
 					<input id="input_guest" class="input" type="text">
 					<div class="ui pointing basic red label error-message" id="error11">
-          				<label>Invalid Number Of Guest</label>
-       				 </div>
+          <label>Invalid Number Of Guest</label>
+       		</div>
 				</div>
 			</div>
 			<div class="ui hidden divider"></div>
@@ -47,14 +51,14 @@
 					<label>First Name</label>
 					<input id="input_first" class="input" type="text">
 					<div class="ui pointing basic red label error-message" id="error04">
-          				<label>First Name is not a valid input</label>
+          				<label>First Name was not a valid input</label>
        				 </div>
 				</div>
 				<div class="field">
 					<label>Last Name</label>
 					<input id="input_last" class="input" type="text">
 					<div class="ui pointing basic red label error-message" id="error05">
-          <label>Last Name is not a valid input</label>
+          <label>Last Name was not a valid input</label>
         </div>
 				</div>
 			</div>
@@ -103,6 +107,7 @@
 			<div class="ui hidden divider"></div>
 			<div class="three fields">
 				<div class="field">
+					<!--THIS IS FOR TO LET THE NUMBERS OF PERSONAL TRANSPORT IS Y OR N-->
 					<label>Personal Transport(Buggy)</label>
 					<select class="ui dropdown input-membership-type" name="type" id="input_transport">
 						<option></option>
@@ -114,9 +119,11 @@
         			</div>
 				</div>
 				<div class="field">
+					<!--THIS IS FOR TO LET THE NUMBERS OF GOLF BAG TROLLEYS IS 0, 1 ,2 , 3 OR 4-->
 					<label>Number Of Golf Bag Trolleys</label>
 					<select class="ui dropdown input-membership-type" name="type" id="input_golfbags">
 						<option></option>
+						<OPTION value="0">0</OPTION>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -124,9 +131,10 @@
 					</select>
 					<div class="ui pointing basic red label error-message" id="error13">
           				<label>Golf Bag Trolleys must be 0 1 2 3 or 4</label>
-        			</div>
+        	</div>
 				</div>
 				<div class="field">
+					<!--THIS IS FOR TO LET THE NUMBERS OF HOLES IS 9 OR 18-->
 					<label>Number Of Holes</label>
 					<select class="ui dropdown input-membership-type" name="type" id="input_number_holes">
 						<option></option>

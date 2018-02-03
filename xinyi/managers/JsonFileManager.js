@@ -6,7 +6,7 @@ class JsonFileManager {
 
 	constructor() {
 
-		var filename = 'jsonfile.json'
+		var filename = 'members.json'
 
 		if (!fs.existsSync(filename)) {
 		  jsf.writeFileSync(filename, [])

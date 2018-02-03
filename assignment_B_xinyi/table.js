@@ -1,13 +1,13 @@
 
 var jsonfile = require('jsonfile')
-var file = 'jsfile.json'
+var file = 'members.json'
 var $ = require('jquery');
 var chunk = require('chunk')
 
 $(function(){
 	let numbers = jsonfile.readFileSync(file)
 	if (numbers.length > 0){
-		let number_page = chunk(numbers, 10)
+		let number_page = chunk(numbers, 6)
 		make_table(number_page[0])
 		if (number_page.length > 1){
 			create_pagination(number_page)

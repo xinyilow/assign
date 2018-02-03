@@ -6,17 +6,16 @@ var $ = require ('jquery');
 var jQuery = $;
 var chunk = require('chunk');
 
-
 const JsonFileManager = require ('./managers/JsonFileManager');
 const Validator = require ('./managers/Validator');
 const Member = require ('./managers/Member');
-
-
 
 $(function(){
 
 	const jfm = new JsonFileManager()
 	const validator = new Validator()
+
+	//THIS IS FOR TO LET THE MEMBERSHIP NUMBER MUST BE 6 DIGITS 
 
 	$('#input_membership').on('keyup',function(){
 		var x=this.value;
@@ -57,7 +56,6 @@ $(function(){
 			$("#input_guest").val()
 		)
 
-
 		validator.checkValidate(member)
 		validator.check(member)
 		validator.firstname(member)
@@ -71,6 +69,7 @@ $(function(){
 		validator.personal_transport(member)
 		validator.numbers_of_golf_bag_trolleys(member)
 		validator.Number_of_holes(member)
+		validator.membershipnumber(member)
 
 		if(validator.checkValidate(member) === true && validator.check(member) === true && 
 			validator.firstname(member) === true && validator.lastname(member)
@@ -78,7 +77,8 @@ $(function(){
 			validator.Date_of_Game(member) === true && validator.Booking_game(member) === true && 
 			validator.Guest_1(member) === true && validator.Guest_2(member) === true && 
 			validator.Guest_3(member) === true && validator.personal_transport(member) === true && 
-			validator.numbers_of_golf_bag_trolleys(member) === true && validator.Number_of_holes(member) === true
+			validator.numbers_of_golf_bag_trolleys(member) === true && validator.Number_of_holes(member)
+			=== true && validator.membershipnumber(member) === true
 		 	){
 			
 	    	jfm.saveMember(member);

@@ -14,7 +14,7 @@ class Validator {
     $('#error08').hide();
     $('#error09').hide();
     $('#error10').hide();
-
+    $('#error11').hide();
   }
 
   check(member){
@@ -35,12 +35,12 @@ class Validator {
   datePublished(member) {
       let datePublished = $('#input_date_published').val();
       if ( datePublished == "") {
-        $('#error04').show();
+        $('#error11').show();
         return false;
       }
     
       else {
-        $('#error04').hide();
+        $('#error11').hide();
         return true;
       }
 
@@ -76,6 +76,18 @@ class Validator {
         return true;
       }
 
+  }
+
+  //THIS IS FOR TO LET DATE PUBLISHED CANNOT BE MORE THAN 10 DIGITS 
+  DatePublished(member){
+    if ($('#input_date_published').val().length !== 10) {
+      $('#error04').show();
+      return false
+    }
+    else{
+       $('#error04').hide();
+      return true
+    }
   }
 
   //THIS IS FOR TO LET PUBLISHER CANNOT BE EMPTY

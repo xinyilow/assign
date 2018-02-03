@@ -1,6 +1,6 @@
-Zvar fs = require('fs');
+var fs = require('fs');
 var jsf = require('jsonfile');
-var filename = 'jsfile.json';
+var filename = 'members.json';
 var $ = require('jquery');
 var jQuery = $;
 var chunk = require('chunk');
@@ -60,12 +60,13 @@ $(function(){
 		validator.Author(member)
 		validator.Category_code(member)
 		validator.In_Stock(member)
+		validator.DatePublished(member)
 
 	 	if (validator.checkValidate(member) === true && validator.check(member) === true && 
 	 		validator.ISBN(member) === true && validator.datePublished(member) === true && 
 			validator.Title(member) === true && validator.Publisher(member) === true && 
 			validator.Author(member) === true && validator.Category_code(member) === true && 
-			validator.In_Stock(member) === true){
+			validator.DatePublished(member) === true && validator.In_Stock(member) === true ){
 
 			jfm.saveMember(member.transformObj())
 	    	$('#error00').show();	

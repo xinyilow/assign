@@ -5,7 +5,7 @@ const jsf = require('jsonfile');
 class JsonFileManager {
 
 	constructor() {
-		var filename = './../jsfile.json'
+		var filename = 'members.json'
 
 		if (!fs.existsSync(filename)) {
 		  jsf.writeFileSync(filename, [])

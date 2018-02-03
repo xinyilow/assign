@@ -26,15 +26,16 @@
    			<div class="two fields">
       			<div class="field">
       				<label >ISBN Number</label>
-      				<input id="input_number" class="input" type="text">
+              <!--THIS IS FOR TO LET ISBN NUMBER IS NUMERIC-->
+      				<input id="input_number" class="input" type="number">
               <div class="ui pointing basic red label error-message" id="error02">
-                <label>ISBN Number is not a valid modulus 11 number</label>
+                <label>ISBN Number was not a valid modulus 11 number</label>
               </div>
                <div class="ui pointing basic red label error-message" id="error03">
-                <label>ISBN Number is not 13 characters</label>
+                <label>ISBN Number was not 13 characters</label>
               </div>
               <div class="ui pointing basic red label error-message" id="error10">
-                <label>ISBN Number is no input</label>
+                <label>ISBN Number was no input</label>
               </div>
       			</div>
       		<div class="field">
@@ -42,6 +43,9 @@
       			<input id="input_date_published" class="input" type="date">
             <div class="ui pointing basic red label error-message" id="error04">
                 <label>Invalid Date published</label>
+            </div>
+            <div class="ui pointing basic red label error-message" id="error11">
+                <label>Date published was no input</label>
             </div>
           </div>
       	</div>
@@ -65,12 +69,13 @@
 			<label>Author</label>
 			<input id="input_author" class="input" type="text">
       <div class="ui pointing basic red label error-message" id="error07">
-          <label>Invalid Authorr</label>
+          <label>Invalid Author</label>
       </div>
 		</div>
 		<div class="ui hidden divider"></div>
 		<div class="two fields">
 			<div class="field">
+        <!--THIS IS FOR TO LET CATEGORY CODE MUST BE SELECT ONE OF OPTION -->
         <label>Category Code</label>
         <select class="ui dropdown input-membership-type" name='type' id="input_category_code">
                 <option></option>
@@ -91,6 +96,7 @@
         </div>
 			</div>
 			<div class="field">
+        <!--THIS IS FOR TO LET In STOCK MUST BE F OR S-->
 				<label>In Stock</label>
 				<select class="ui dropdown input-membership-type" name='type' id="input_in_stock">
                 <option></option>
